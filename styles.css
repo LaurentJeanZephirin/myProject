@@ -12,5 +12,8 @@
     border: thin solid white;
     width: 50%;
     height: 50px;
-    box-shadow: 3px 3px 3px blue;
+}
+
+.ok {
+    color: beige;
 }
