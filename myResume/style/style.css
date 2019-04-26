@@ -1,0 +1,16 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: -21px;
+}
+
+header {
+    text-align: center;
+}
+
+div {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
