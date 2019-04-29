@@ -15,6 +15,7 @@ header {
     background-color: #110000;
     color: white;
     display: inline-flex;
+    align-items: center;
 }
 
 main {
