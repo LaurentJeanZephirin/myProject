@@ -57,7 +57,7 @@ et il arrete de remplir le tableau quand il y a 20 nombres pairs dans le tableau
 
 ## La Boucle While
 
-La boucle **While**, "tant que" en français s'execute tant que la condition est vérifiée.  Cette boucle est de moins en moins utilisé car il est aisé de générer des boucles infini.
+La boucle **While**, "tant que" en français s'execute tant que la condition est vérifiée.  Cette boucle est de moins en moins utilisé car il est aisé de générer des boucles infini :rage:.
 
 ### 1. La syntaxe
 
@@ -71,4 +71,30 @@ instruction
 
 #### 2.1 Condition
 
-Ici; aucune ~~initialisation~~ ne précede la condition. Elle est évaluée avant chaque passage dans la boucle :rage:
+Ici, aucune ~~initialisation~~ ne précede la condition. Elle est évaluée avant chaque passage dans la boucle.
+Si cette expression est vrai, l'instruction est exécutée.
+
+#### 2.2 Instruction
+
+Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un bloc d'instructions ```{ ... }``` pour les regrouper.  
+Note : on pourra utiliser l'instruction break afin d'arrêter une boucle avant que la condition soit vérifiée.
+
+### Exemple
+
+```javascript
+var n = 0;
+var x = 0;
+
+while (n < 3) {
+  n++;
+  x += n;
+}
+```
+
+À chaque itération, la boucle incrémente la valeur de n et l'ajoute à x. Ainsi,  x et n prennent les valeurs suivantes :
+
+* Après la première itération : n = 1 et x = 1
+* Après la deuxième itération : n = 2 et x = 3
+* Après la troisième itération : n = 3 et x = 6
+
+Une fois que la troisième itération est exécutée, la condition n < 3 n'est plus vérifiée et donc la boucle se termine.
