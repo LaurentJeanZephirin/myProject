@@ -51,3 +51,24 @@ for (let i = 4; tab.length < 20; i++) {
 
 console.log(tab);
 ```
+
+Ce code génère un tableau contenant des nombres pairs consécutifs, le premier nombre du tableau doit est 4
+et il arrete de remplir le tableau quand il y a 20 nombres pairs dans le tableau
+
+## La Boucle While
+
+La boucle **While**, "tant que" en français s'execute tant que la condition est vérifiée.  Cette boucle est de moins en moins utilisé car il est aisé de générer des boucles infini.
+
+### 1. La syntaxe
+
+```javascript
+while (condition) {
+instruction
+}
+```
+
+### 2. Utilisation
+
+#### 2.1 Condition
+
+Ici; aucune ~~initialisation~~ ne précede la condition. Elle est évaluée avant chaque passage dans la boucle :-(
