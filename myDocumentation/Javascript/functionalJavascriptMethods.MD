@@ -80,3 +80,35 @@ const moyenAge = persons.reduce((acc, currentValue) => {return acc + currentValu
 ```
 
 Dans cet exemple, reduce additionne l'age de toutes les personnes avec son accumulateur initié à 0 et une fois qu'il a tout additionné, il divise la soome par le nombre de personnes.
+
+
+### filter()
+
+La méthode filter() crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction callback et filtre les éléments du tableau qui ne remplisse pas cet condition.
+
+#### Syntaxe
+
+```javascript
+arr.filter(callback); // callback(elementCourant[, index[, tableauEntier]])
+var nouveauTableau = arr.filter(callback, thisArg);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
