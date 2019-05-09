@@ -28,3 +28,11 @@ Une expression qui est évaluée à la fin de chaque itération. Cela se produit
 
 Une **instruction** est le code qui est exécuté si la condition de la boucle s'avere être *true*. Pour pouvoir executer plusieurs  
 instructions au sein de la boucle for, il faudra utiliser une instruction de bloc : ``` {...}``` qui regroupera les differentes instructions.
+
+### La syntaxe
+
+```javascript
+for (initialisation; conditin; expression finale) {
+instruction
+}
+```
