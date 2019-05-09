@@ -68,3 +68,15 @@ Une valeur utilisée comme premier argument lors du premier appel de la fonction
 
 #### Exemples
 
+```javascript
+const tab = hostels.reduce((acc, hostel) => acc.concat(hostel.rooms),[])
+```
+
+Dans cet exemple, reduce regroupe tous les éléments de *rooms* dans un seul tableau qui est initialisé à la fin avec les ```[]```
+
+
+```javascript
+const moyenAge = persons.reduce((acc, currentValue) => {return acc + currentValue.age / persons.length},0);
+```
+
+Dans cet exemple, reduce additionne l'age de toutes les personnes avec son accumulateur initié à 0 et une fois qu'il a tout additionné, il divise la soome par le nombre de personnes.
