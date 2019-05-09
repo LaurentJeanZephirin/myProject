@@ -71,4 +71,4 @@ instruction
 
 #### 2.1 Condition
 
-Ici; aucune ~~initialisation~~ ne précede la condition. Elle est évaluée avant chaque passage dans la boucle :-(
+Ici; aucune ~~initialisation~~ ne précede la condition. Elle est évaluée avant chaque passage dans la boucle :rage:
