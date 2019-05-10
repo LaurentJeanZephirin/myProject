@@ -23,6 +23,7 @@ console.log(map1);
 ```
 Ce code renverra un tableau avec: ```[2, 8, 18, 32]```
 
+- - -
 
 ### Reduce()
 
@@ -81,6 +82,7 @@ const moyenAge = persons.reduce((acc, currentValue) => {return acc + currentValu
 
 Dans cet exemple, reduce additionne l'age de toutes les personnes avec son accumulateur initié à 0 et une fois qu'il a tout additionné, il divise la soome par le nombre de personnes.
 
+- - -
 
 ### filter()
 
@@ -132,6 +134,85 @@ La méthode sort() trie les éléments d'un tableau, dans ce même tableau, et r
 arr.sort()
 arr.sort(fonctionComparaison)
 ```
+
+##### fonctionComparaison
+
+Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code Unicode de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
+
+#### Exemple
+
+```javascript
+.sort((alphabetOrder1, alphabetOrder2) => alphabetOrder2.roomName > alphabetOrder1.roomName ? -1 ; 1);
+```
+
+Cet exemple trie les noms de chambres par ordre alphabetique
+
+- - -
+
+### push()
+
+Cette méthode permet d'ajouter des éléments à la fin d'un tableau et de renvoyer la nouvelle taille du tableau.
+
+#### Syntaxe
+
+```javascript
+arr.push(élément1, ..., élémentN)
+```
+
+Les éléments entre les parenthèses sont les éléments à ajouter à la fin du tableau
+
+#### Exemple
+
+```javascript
+persons.push(personne)
+```
+
+L'élément personne est ajouté à la fin du tableau persons.
+
+- - - 
+
+### slice()
+
+La méthode slice() renvoie un objet tableau, contenant une copie superficielle (shallow copy) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.
+
+#### Syntaxe
+
+```javascript
+arr.slice()
+arr.slice(début)
+arr.slice(début, fin)
+```
+
+##### début
+
+Indice (à partir de zéro) depuis lequel commencer l'extraction.
+S'il s'agit d'un indice négatif, début indique un décalage depuis la fin de la séquence. Par exemple, ```slice(-2)``` extrait les avant-dernier et dernier éléments dans la séquence.
+
+Si début est absent, ```slice()``` commencera depuis 0. Si début est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.
+
+##### fin
+
+Indice (à partir de zéro) auquel arrêter l'extraction. ```slice()``` extrait jusqu'à cet indice, mais pas l'élément situé en fin lui-même.
+```slice(1,4)``` extrait du deuxième au quatrième élément (les éléments d'indices 1, 2 et 3).
+S'il s'agit d'un indice négatif, fin indique un décalage depuis la fin de la séquence. ```slice(2,-1)``` extrait du troisième à l'avant-dernier élément dans la séquence.
+Si fin n'est pas fourni, ```slice()``` extraira jusqu'à la fin de la séquence ```(arr.length)```. Si fin est supérieur à la longueur de la séquence, ```slice()``` fera une extraction jusqu'à la fin de la séquence.
+
+#### Exemples
+
+```javascript
+var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// expected output: Array ["bison", "camel", "duck", "elephant"]
+```
+
+
 
 
 
