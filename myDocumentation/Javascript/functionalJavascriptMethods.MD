@@ -203,21 +203,57 @@ Si fin n'est pas fourni, ```slice()``` extraira jusqu'à la fin de la séquence 
 var animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 console.log(animals.slice(2));
-// expected output: Array ["camel", "duck", "elephant"]
+// résultat attendu: Array ["camel", "duck", "elephant"]
 
 console.log(animals.slice(2, 4));
-// expected output: Array ["camel", "duck"]
+// résultat attendu: Array ["camel", "duck"]
 
 console.log(animals.slice(1, 5));
-// expected output: Array ["bison", "camel", "duck", "elephant"]
+// résultat attendu: Array ["bison", "camel", "duck", "elephant"]
 ```
 
+- - - 
 
+### splice()
 
+La méthode splice() modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments à même le tableau.On peut ainsi vider ou remplacer une partie d'un tableau.
 
+#### Syntaxe
 
+```javascript
+var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+```
 
+##### debut
 
+L'indice à partir duquel commencer le changement (les numéros commencent à 0). S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau. Si la valeur est supérieure à la longueur du tableau, elle est ramenée à 0.
+
+##### nbASupprimer
+
+Un entier indiquant le nombre d'anciens éléments à remplacer.
+Si ce paramètre est absent ou si sa valeur est supérieure ou égale à array.length - début, alors les éléments entre début et la fin du tableau seront supprimés.
+Si nbASupprimer vaut 0, aucun élément ne sera supprimé. Dans ce cas, il est nécessaire de spécifier au moins un nouvel élément.
+
+##### elemN
+
+Les éléments à ajouter au tableau à partir de début. Si vous ne spécifiez pas de nouvel élément, les anciens éléments seront simplement supprimés du tableau.
+
+#### Exemples
+
+```javascript
+var months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// inserts at index 1
+console.log(months);
+// résultat attendu: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+months.splice(4, 1, 'May');
+// replaces 1 element at index 4
+console.log(months);
+// résultat attendu: Array ['Jan', 'Feb', 'March', 'April', 'May']
+```
+
+- - - 
 
 
 
