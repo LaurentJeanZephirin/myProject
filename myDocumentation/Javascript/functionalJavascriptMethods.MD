@@ -255,6 +255,75 @@ console.log(months);
 
 - - - 
 
+### split()
+
+La méthode split() permet de diviser une chaîne de caractères à partir d'un séparateur pour fournir un tableau de sous-chaînes.
+
+#### Syntaxe
+
+```javascript
+str.split([séparateur[, qtéMax]])
+```
+
+##### separateur
+
+Paramètre optionnel qui définit le ou les caractères à utiliser pour scinder la chaîne. Le séparateur est considéré comme une chaîne ou une expression rationnelle. Si le séparateur est omis ou qu'il n'apparaît pas dans la chaîne, le tableau retourné contiendra un unique élément contenant la chaîne entière. Si le séparateur est une chaîne vide, la chaîne str sera convertie en un tableau dont les éléments seront les caractères de la chaîne. Si le séparateur contient un ou plusieurs caractères, la chaîne de caractères entière doit être trouvée pour effectuer une césure.
+
+##### qtéMax
+
+Paramètre optionnel. Un entier définissant la limite sur le nombre de sous-chaînes à retourner. La méthode split scindera toujours la chaîne à partir du séparateur, mais le tableau retourné contiendra au plus qtéMax sous-chaînes.
+
+#### Exemples
+
+```javacript
+var words = str.split(' ');
+console.log(words[3]);
+// résultat attendu: "fox"
+
+var chars = str.split('');
+console.log(chars[8]);
+// résultat attendu: "k"
+
+var strCopy = str.split();
+console.log(strCopy);
+// résultat attendu: Array ["The quick brown fox jumps over the lazy dog."]
+```
+
+- - - 
+
+### join()
+
+La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'un objet semblable à un tableau). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
+
+#### Syntaxe
+
+```javascript
+arr.join()
+arr.join(séparateur)
+```
+
+##### séparateur
+
+Ce paramètre optionnel indique une chaine de caractères pour séparer chaque élément du tableau. Le séparateur est converti en une chaine de caractères si nécessaire. Si ce paramètre n'est pas utilisé, les éléments du tableau seront séparés par une virgule (,). Si ce paramètre est la chaîne vide, les éléments seront accolés les uns aux autres sans espace entre. La valeur par défaut de ce paramètre est ```",".```
+
+#### Exemples
+
+```javascript
+var elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// résultat attendu: "Fire,Air,Water"
+
+console.log(elements.join(''));
+// résultat attendu: "FireAirWater"
+
+console.log(elements.join('-'));
+// résultat attendu: "Fire-Air-Water"
+```
+
+- - - 
+
+
 
 
 
