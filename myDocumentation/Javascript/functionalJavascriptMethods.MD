@@ -93,9 +93,45 @@ arr.filter(callback); // callback(elementCourant[, index[, tableauEntier]])
 var nouveauTableau = arr.filter(callback, thisArg);
 ```
 
+##### Callback
 
+La fonction de test (ou prédicat) à appliquer à chaque élément du tableau. Cette fonction est appelée avec les arguments suivants :
+###### element courant
 
+L'élément à traiter
 
+###### index
+
+Son indice
+
+###### array
+
+Le tableau complet ( Cette fonction renvoie true — ou une valeur équivalente — si l'élément doit être conservé pour le tableau résultat et false dans le cas contraire. )
+
+##### thisArg (facultatif)
+
+Objet à utiliser en tant que this quand la fonction callback est exécutée.
+
+#### Exaemple
+
+```javascript
+ .filter(room => room.size >= 3);
+```
+
+Dans cette exemple il y y un ````.filter``` qui est effectué sur un objet qui doit filtrer la taille des chambres.
+
+- - -
+
+### sort()
+
+La méthode sort() trie les éléments d'un tableau, dans ce même tableau, et renvoie le tableau. Par défaut, le tri s'effectue sur les éléments du tableau convertis en chaînes de caractères et triées selon les valeurs des unités de code UTF-16 des caractères.
+
+#### Syntaxe
+
+```javascript
+arr.sort()
+arr.sort(fonctionComparaison)
+```
 
 
 
