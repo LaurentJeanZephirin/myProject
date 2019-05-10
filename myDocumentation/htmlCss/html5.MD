@@ -3,6 +3,11 @@
 # Les Balises structurente
 
 Le **header** est placé en haut de page et représente un groupe de contenu introductif
+
+```html
+<header>
+```
+
 - - - 
 - - -
 La **nav** représente une section ayant des liens vers d'autres pages
